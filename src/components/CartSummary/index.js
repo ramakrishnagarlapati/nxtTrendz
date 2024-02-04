@@ -1,4 +1,5 @@
 import CartContext from '../../context/CartContext'
+import PaymentModal from '../PaymentModal'
 
 import './index.css'
 
@@ -19,13 +20,8 @@ const CartSummary = () => (
               /-
             </h1>
             <p className="total-items">{cartList.length} Items in cart</p>
-            <button type="button" className="checkout-button d-sm-none">
-              Checkout
-            </button>
+            <PaymentModal total={total} cartListLength={cartList.length} />
           </div>
-          <button type="button" className="checkout-button d-lg-none">
-            Checkout
-          </button>
         </>
       )
     }}
